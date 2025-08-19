@@ -1,19 +1,21 @@
-import React from "react";
-import { useState } from "react";
-
+import React, { useState } from "react";
+import { searchBooks } from "../services/booksAPI";
 
 export const SearchBar = () => {
-  const [query, setQuery] = useState(""); 
+  const [query, setQuery] = useState("");
 
-  const handleSearch = () => {
+  const handleSearch = async () => {
     if (query.trim() === "") {
-      alert("Please enter a search term"); 
+      alert("Please enter a search term");
       return;
     }
-    console.log("Searching for:", query);
+
+    const results = await searchBooks(query);
+    console.log("Books found:", results); // later you’ll display them
   };
+
   return (
-  <div className="flex flex-col items-center mt-5 space-y-3">
+    <div className="flex flex-col items-center mt-5 space-y-3">
       <input
         className="border border-gray-400 rounded-xl p-3 w-6/12"
         type="text"
@@ -28,6 +30,5 @@ export const SearchBar = () => {
         SEARCH
       </button>
     </div>
-
   );
 };
