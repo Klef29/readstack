@@ -1,4 +1,3 @@
-import React from "react";
 
 const BookCard = ({ book }) => {
   // Open Library book covers: https://covers.openlibrary.org/b/id/{coverId}-M.jpg
@@ -8,7 +7,7 @@ const BookCard = ({ book }) => {
     : "https://via.placeholder.com/150x200?text=No+Cover";
 
   return (
-      <div className="border rounded-lg shadow p-3 w-48">
+      <div className="border rounded-lg shadow p-3 w-48 transform hover:scale-105 transition-transform duration-200">
               <img src={coverUrl} alt={book.title} className="w-full h-64 object-cover rounded" />
               <h3 className="font-semibold mt-2 text-sm">{book.title}</h3>
               <p className="text-gray-600 text-xs">

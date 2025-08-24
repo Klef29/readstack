@@ -9,7 +9,8 @@ export const SearchBar = ({ onSearchResults }) => {
       alert("Please enter a search term");
       return;
     }
-
+    
+// This function will call the API and pass results to the parent component
     const results = await searchBooks(query);
     onSearchResults(results); 
   };
