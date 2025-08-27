@@ -1,6 +1,3 @@
-import React from "react";
-import { SearchBar } from "../components/SearchBar";
-import Home from "./Home";
 
 function About() {
   return (
@@ -14,11 +11,11 @@ function About() {
         Dive into stories and ideas that spark curiosity and growth.
       </p>
       </div>
-    <div className="flex flex-col items-center justify-center px-6 py-20 bg-gray-50">
+    <div className="flex flex-col items-center justify-center px-6 py-20 bg-[#fcfcfc]">
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl w-full">
               {/* Image */}
-              <div className="flex justify-center">
+              <div className="flex justify-center transform hover:scale-105 transition-transform duration-200">
                   <img
                       src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f"
                       alt="Bookshelf"

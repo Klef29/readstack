@@ -3,16 +3,23 @@ import { searchBooks } from "../services/booksAPI";
 
 export const SearchBar = ({ onSearchResults }) => {
   const [query, setQuery] = useState("");
+  const [loading, setLoading] = useState(false); // New state for loading
 
   const handleSearch = async () => {
     if (query.trim() === "") {
       alert("Please enter a search term");
       return;
     }
-    
-// This function will call the API and pass results to the parent component
-    const results = await searchBooks(query);
-    onSearchResults(results); 
+
+    try {
+      setLoading(true); // Start loading
+      const results = await searchBooks(query);
+      onSearchResults(results);
+    } catch (error) {
+      console.error("Error searching books:", error);
+    } finally {
+      setLoading(false); // Stop loading
+    }
   };
 
   return (
@@ -24,14 +31,16 @@ export const SearchBar = ({ onSearchResults }) => {
         placeholder="Search books..."
         value={query}
         onChange={(e) => setQuery(e.target.value)}
+        disabled={loading} // Disable typing while loading
       />
 
       {/* Keep button neat and centered */}
       <button
-        className="mt-4 bg-[#16247D] text-white font-semibold text-sm w-1/12 md:w-1/12 sm:w-1/12 py-3 rounded-lg transition duration-300 hover:bg-blue-900"
+        className="mt-4 bg-[#16247D] text-white font-semibold text-sm w-1/12 md:w-1/12 sm:w-1/12 py-3 rounded-lg transition duration-300 hover:bg-blue-900 disabled:opacity-50"
         onClick={handleSearch}
+        disabled={loading} // Disable button while loading
       >
-        SEARCH
+        {loading ? "Loading..." : "SEARCH"}
       </button>
     </div>
   );

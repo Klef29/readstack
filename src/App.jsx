@@ -1,7 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
-import About from "./pages/About"; // make sure About.jsx exists in /pages
+import About from "./pages/About";
+import BookDetails from "./pages/BookDetails";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/book/:id" element={<BookDetails />} />
       </Routes>
     </Router>
   );
