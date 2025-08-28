@@ -29,7 +29,7 @@ function Home() {
 
       {/* Search Results Label */}
       {searched && books.length > 0 && (
-        <p className="mt-4 text-left w-full max-w-5xl text-sm sm:text-base font-bold text-gray-900 px-2">
+        <p className="mt-12 mb-5 text-left w-full max-w-5xl text-sm sm:text-base font-bold text-gray-900 px-2">
           SEARCH RESULTS
         </p>
       )}
