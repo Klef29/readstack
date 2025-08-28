@@ -21,13 +21,19 @@ ReadStack is a simple React-based Book Library application that allows users to 
 
 ---
 
-## 📅 Next Steps
-- Implement the **Book Details Page** to show more info (author, description, publish date).  
-- Improve UI design for search results and make the layout more responsive.  
-- Add error handling for searches with no results.  
-- Clean and refactor the code for better maintainability.  
+## 🚀 Features  
+
+- 🔍 Search books by title  
+- 📖 View detailed information about each book  
+- ⬅️ Back navigation from details to search results  
+- 🎨 Fully responsive design (mobile, tablet, desktop)  
+- ⚡ Built with React + React Router for navigation  
 
 ---
+
+## 📂 Folder Structure  
+
+
 
 ## 📦 Installation & Setup
 1. Clone the repository:  

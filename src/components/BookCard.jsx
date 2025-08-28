@@ -11,17 +11,37 @@ const BookCard = ({ book }) => {
 
   return (
     <Link to={`/book/${workId}`}>
-      <div className="border rounded-lg shadow p-3 w-48 transform hover:scale-105 transition-transform duration-200 cursor-pointer">
+      <div className="border rounded-lg shadow p-3 
+                      w-40 sm:w-48 md:w-56 lg:w-64 
+                      transform hover:scale-105 
+                      transition-transform duration-200 cursor-pointer
+                      bg-white">
+        
+        {/* Book Cover */}
         <img
           src={coverUrl}
           alt={book.title}
-          className="w-full h-64 object-cover rounded"
+          className="w-full h-56 sm:h-64 md:h-72 lg:h-80 
+                     object-cover rounded"
         />
-        <h3 className="font-semibold mt-2 text-sm">{book.title}</h3>
-        <p className="text-gray-600 text-xs">
+
+        {/* Book Title */}
+        <h3 className="font-semibold mt-2 
+                       text-xs sm:text-sm md:text-base lg:text-lg 
+                       truncate">
+          {book.title}
+        </h3>
+
+        {/* Author(s) */}
+        <p className="text-gray-600 
+                      text-[10px] sm:text-xs md:text-sm 
+                      truncate">
           {book.author_name ? book.author_name.join(", ") : "Unknown Author"}
         </p>
-        <p className="text-gray-500 text-xs">
+
+        {/* Year */}
+        <p className="text-gray-500 
+                      text-[10px] sm:text-xs md:text-sm">
           {book.first_publish_year || "N/A"}
         </p>
       </div>

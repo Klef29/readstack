@@ -31,7 +31,7 @@ const BookDetails = () => {
     : "https://via.placeholder.com/300x400?text=No+Cover";
 
   return (
-    <div className="max-w-3xl mx-auto mt-10 p-6 border rounded-lg shadow-lg bg-white">
+    <div className="max-w-3xl mx-auto mt-10 p-6 border rounded-lg shadow-lg bg-white ">
          {/* Back Button */}
       <button
         onClick={() => navigate(-1)}
