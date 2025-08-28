@@ -32,9 +32,39 @@ ReadStack is a simple React-based Book Library application that allows users to 
 ---
 
 ## 📂 Folder Structure  
+ReadStack/
+│
+├── public/
+│
+├── src/
+│ ├── assets/ # Project images, logos
+│ ├── components/ (BookCard, Navbar, Searchbar)
+│ ├── pages/ (Home, About, BookDetails)
+│ ├── App.jsx (Main app component with routes)
+│ ├── index.css # Entry point
+│ └── services/ (booksAPI)
+│
+├── package.json # Project dependencies
+├── tailwind.config.js # Tailwind configuration
+├── postcss.config.js # PostCSS configuration
+├── README.md # Project documentation
+└── 
 
+---
 
+## 👨‍💻 Author
+
+Albert Asare –  Frontend Developer
+Passionate about building user-friendly web apps and exploring new technologies.
+
+---
+
+## ⭐ Contribute
+
+Feel free to fork this project, open issues, and submit pull requests.
+
+---
 
 ## 📦 Installation & Setup
-1. Clone the repository:  
-   git clone https://github.com/Klef29/readstack.git
+    Clone the repository:  
+    git clone https://github.com/Klef29/readstack.git
